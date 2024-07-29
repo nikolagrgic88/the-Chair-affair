@@ -1,0 +1,51 @@
+.buttonContainer {
+	display: flex;
+	background-color: rgba(96, 96, 96, 0.97);
+	padding-left: 0.5rem;
+	padding-right: 1rem;
+	min-width: 11rem;
+	max-height: 10vw;
+	flex-shrink: 1;
+}
+.buttonContainer button {
+	background-color: var(--color-dark-gray);
+	background-color: var(--color-coral);
+	color: var(--color-white);
+	padding: 1.2rem;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 10px;
+	transition: 1s;
+	font-size: 1rem;
+	font-weight: bold;
+	min-width: 10vw;
+	max-height: 6vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttonContainer button:hover {
+	background-color: var(--color-medium-gray);
+	background-color: var(--color-coral-dark);
+}
+
+/* @media (min-width: 1024px) {
+	.outletContainer {
+		padding: 20px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.outletContainer {
+		flex-direction: column; 
+		padding: 15px;
+	}
+}
+
+@media (max-width: 767px) {
+	.outletContainer {
+		flex-direction: column;
+		padding: 10px;
+	}
+} */

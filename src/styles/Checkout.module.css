@@ -1,0 +1,24 @@
+.checkoutContainer {
+	min-height: 60vh;
+	min-width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+}
+
+.checkoutContainer h1 {
+	font-size: large;
+	color: var(--color-black);
+	margin: 2rem 0;
+	display: flex;
+	align-items: end;
+}
+.orderContainer {
+	min-width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: start;
+}
+
+

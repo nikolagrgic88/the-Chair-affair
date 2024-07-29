@@ -1,0 +1,25 @@
+.orderSummary {
+	position: sticky;
+	top: 20px;
+	min-width: 20rem;
+	margin: 1rem 0;
+	min-height: fit-content;
+	background-color: var(--color-light-gray);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+.orderSummary h4 {
+	margin: 0.5rem 0 0.5rem 0;
+}
+.orderSummary span {
+	margin-top: 0.5rem;
+}
+
+.subtotalContainer,
+.shipping,
+.total {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}

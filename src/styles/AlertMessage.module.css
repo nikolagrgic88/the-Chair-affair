@@ -1,0 +1,12 @@
+.alertContainer {
+	position: relative;
+}
+.alert {
+	position: absolute;
+	font-size: small;
+	left: 1.5rem;
+	background-color: var(--color-seafoam);
+	padding: 0.4rem;
+	border-radius: 0.5rem;
+}
+

@@ -1,0 +1,37 @@
+.welcomePageContainer {
+	max-height: 80vh;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.innerContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.innerContainer h1 {
+	flex-shrink: 1;
+	width: auto;
+	position: absolute;
+	color: var(--main-text-color);
+	font-size: 2.5vw;
+	padding: 2rem;
+}
+.imageContainer {
+	position: relative;
+	flex-shrink: 1;
+	max-width: 100%;
+}
+.imageContainer img {
+	width: 100%;
+	height: auto;
+}
+.buttonContainer {
+	position: absolute;
+	display: flex;
+	bottom: 29.5%; /* Adjust percentage for desired vertical position */
+	left: 72.5%;
+	transform: translateX(-50%);
+}

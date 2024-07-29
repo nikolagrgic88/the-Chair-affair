@@ -1,0 +1,12 @@
+.accountContainer {
+	min-height: 50vh;
+}
+
+.accountHeading {
+	margin: 2rem;
+}
+
+.accountHeading h1 {
+	font-size: medium;
+	color: inherit;
+}

@@ -1,0 +1,45 @@
+.productContainer {
+}
+
+.imageDetailsContainer {
+	min-height: 18rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.imageContainer {
+	max-width: 10rem;
+	max-height: 20rem;
+}
+.imageContainer img {
+	object-fit: contain;
+	max-width: 100%;
+}
+.detailsContainer {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+}
+.actionButtons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.actionButtons span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	max-height: 1.3rem;
+}
+.actionButtons span:hover {
+	color: red;
+	cursor: pointer;
+}
+.ionButton {
+	--background: var(--color-coral);
+	min-width: 100%;
+}

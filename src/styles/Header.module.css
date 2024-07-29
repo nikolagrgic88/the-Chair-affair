@@ -1,0 +1,115 @@
+.mainHeader {
+	min-width: 80%;
+	background-color: var(--color-dark-gray);
+}
+.innerHeader {
+	max-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 15%;
+}
+
+.mainTitle {
+	display: flex;
+	align-items: center;
+}
+
+.mainTitle img {
+	width: 6rem;
+	margin-right: 1.5rem;
+	border-radius: 50%;
+}
+.mainTitle h1 {
+	font-size: 2rem;
+}
+
+.buttonsContainer {
+	display: flex;
+	flex-direction: row;
+}
+.buttonContainer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3rem;
+	height: 3rem;
+}
+.ionIcon {
+	color: white;
+	font-size: 1.5rem;
+}
+
+.quantityContainer {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	background-color: var(--color-coral-dark);
+	color: var(--color-white);
+	border-radius: 50%;
+	width: 1.1rem;
+	height: 1.1rem;
+	font-weight: 300;
+	font-size: small;
+	top: 0.1rem;
+	right: 0.2rem;
+}
+.menuContainer {
+	background-color: var(--color-light-gray);
+	display: flex;
+	gap: 1rem;
+	padding: 0 0.6rem;
+	border-radius: 0.2rem;
+}
+
+.menuContainer a {
+	text-decoration: none;
+	color: inherit;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.mainHeader {
+		justify-content: center;
+		overflow: hidden;
+	}
+	.buttonContainer {
+		height: 2rem;
+		width: 2rem;
+	}
+	.quantityContainer {
+		width: 1.1rem;
+		height: 1.1rem;
+		font-weight: 300;
+		font-size: small;
+		top: -0.2rem;
+		right: -0.3rem;
+	}
+}
+
+
+@media (max-width: 767px) {
+	.mainHeader {
+		justify-content: center;
+		overflow: hidden;
+	}
+	.buttonContainer {
+		height: 2rem;
+		width: 2rem;
+	}
+	.quantityContainer {
+		width: 1.1rem;
+		height: 1.1rem;
+		font-weight: 300;
+		font-size: small;
+		top: -0.2rem;
+		right: -0.3rem;
+	}
+	.logoContainer {
+		display: none;
+	}
+	.mainTitle h1 {
+		font-size: 1.5rem;
+	}
+}

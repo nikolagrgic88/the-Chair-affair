@@ -1,0 +1,24 @@
+.loginContainer {
+	max-width: 22rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	background-color: var(--color-light-gray);
+	border-radius: 1rem;
+	border: 1px solid black;
+}
+.loginContainer input {
+	background-color: var(--color-white);
+}
+.buttonContainer {
+	font-size: small;
+	margin-top: 1rem;
+}
+.buttonContainer button {
+	font-size: small;
+}
+.buttonContainer button:hover {
+	background-color: transparent;
+}
