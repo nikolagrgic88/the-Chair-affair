@@ -4,9 +4,10 @@ import styles from '../../styles/SugestedItemsAnimation.module.css';
 import { useRouteLoaderData } from 'react-router-dom';
 import Product from '../Product';
 import { ApiResponse } from '../../App';
+import { CombinedData } from '../../util/loaders';
 
 const SugestedItemsAnimation = () => {
-	const loadedData = useRouteLoaderData('root-page') as ApiResponse;
+	const {data} = useRouteLoaderData('root-page') as CombinedData;
 	const controls = useAnimationControls();
 	const ref = useRef(null);
 
@@ -47,8 +48,8 @@ const SugestedItemsAnimation = () => {
 			.slice(0, 6);
 	};
 	const sugestedItems = useMemo(
-		() => getSugestedElements(loadedData),
-		[loadedData]
+		() => getSugestedElements(data!),
+		[data]
 	);
 
 	// const sugestedItems = DATA_T.slice(0, 6);

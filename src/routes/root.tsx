@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Pages from '../pages';
 import { productDataLoader, checkAuthLoader } from '../util/loaders';
 import App from '../App';
-import Components from '../components';
+
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +24,7 @@ const router = createBrowserRouter([
 			},
 			{ path: '/login', element: <Pages.Login /> },
 			{ path: '/checkout', element: <Pages.Checkout /> },
+			{ path: '*', element: <Pages.ErrorPage /> },
 		],
 	},
 ]);

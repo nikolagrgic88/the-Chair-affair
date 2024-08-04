@@ -1,11 +1,10 @@
 import { UNSAFE_useScrollRestoration, useNavigate } from 'react-router-dom';
 import styles from '../styles/Welcome.module.css';
 import FramerComponents from '../components/framer';
-import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 const Welcome = () => {
-	const match = useMediaQuery('(max-width:1023px)');
-	console.log(match);
+	
 	UNSAFE_useScrollRestoration();
 	const navigate = useNavigate();
 

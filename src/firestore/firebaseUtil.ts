@@ -6,6 +6,7 @@ import {
 	limit,
 	QuerySnapshot,
 	DocumentSnapshot,
+
 } from 'firebase/firestore';
 import { db } from './firebaseConfig';
 import { ProductProps } from '../components/Product';
@@ -60,3 +61,24 @@ export const fetchProductData = async (): Promise<ApiResponse> => {
 		return [];
 	}
 };
+
+import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
+
+export const fetchImagesFromStorage= async(): Promise<string[]> => {
+	try {
+	  const storage = getStorage();
+	  const imagesRef = ref(storage); 
+  
+	  const results = await listAll(imagesRef);
+  
+	  const imageUrls = await Promise.all(
+		results.items.map((itemRef) => getDownloadURL(itemRef))
+	  );
+  
+	  return imageUrls;
+	} catch (error) {
+	  console.error("Error fetching images:", error);
+	  throw error; 
+	}
+  }
+  

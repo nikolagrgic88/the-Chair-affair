@@ -1,26 +1,29 @@
 import { getAuth } from 'firebase/auth';
 import { ApiResponse } from '../App';
-import { getIkeaData, Data, fetchProductData } from '../firestore/firebaseUtil';
+import { fetchProductData, fetchImagesFromStorage } from '../firestore/firebaseUtil';
 import { redirect } from 'react-router-dom';
 
-export const initialDataLoader = async (): Promise<Data> => {
+export type CombinedData = {
+	data: ApiResponse | null;
+	images: string[];
+}
+
+
+
+export const productDataLoader = async ():Promise<CombinedData> => {
 	try {
-		const response = await getIkeaData();
-		return response;
+		const [response, responseImages] = await Promise.all([
+			fetchProductData(),
+			fetchImagesFromStorage(),
+		  ]);
+	  
+		  return {
+			data: response,
+			images: responseImages,
+		  };
 	} catch (e) {
 		console.error('Error fetching initial data:', e);
-		return { data: [], lastVisibleItem: null };
-	}
-};
-
-export const productDataLoader = async (): Promise<ApiResponse | null> => {
-	try {
-		const response = await fetchProductData();
-
-		return response;
-	} catch (e) {
-		console.error('Error fetching initial data:', e);
-		return [];
+		return {data: null, images: [] };
 	}
 };
 

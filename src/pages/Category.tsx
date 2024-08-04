@@ -1,22 +1,23 @@
 import { useParams, useRouteLoaderData } from 'react-router-dom';
 import styles from '../styles/Category.module.css';
-import { ApiResponse } from '../App';
+
 import Product, { ProductProps } from '../components/Product';
 import { useEffect, useState } from 'react';
 import { IonButton } from '@ionic/react';
-import { Categories } from '../util/util';
+import { type Categories } from '../util/util';
 import { CATEGORIES as categories } from '../util/util';
 import Component from '../components/index';
+import { CombinedData } from '../util/loaders';
 
 const Category = () => {
 	const [currentPage, setCurrentPage] = useState(1);
 	const { category } = useParams<{ category: keyof Categories }>();
-	const loadedData = useRouteLoaderData('root-page') as ApiResponse;
+	const {data} = useRouteLoaderData('root-page') as CombinedData;
 
 	if (!category || !categories[category]) {
 		return <div>No item found</div>;
 	}
-	const categoryItems = loadedData.filter((item): item is ProductProps => {
+	const categoryItems = data!.filter((item): item is ProductProps => {
 		const relevantCategories = categories[category];
 		return item.categoryPath.some((path) =>
 			relevantCategories.includes(path.name)

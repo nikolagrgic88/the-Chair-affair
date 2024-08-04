@@ -1,3 +1,5 @@
+
+
 export type Categories = {
 	office: string[];
 	kids: string[];
@@ -43,32 +45,32 @@ export const CATEGORIES: Categories = {
 };
 export const CATEGORY_IMAGES = [
 	{
-		img: 'src/assets/office1.jpg',
-		hover: 'src/assets/office2.jpg',
+		img: 'office1.jpg',
+		hover: 'office2.jpg',
 		description: 'Office',
 		link: '/category/office',
 	},
 	{
-		img: 'src/assets/dining1.avif',
-		hover: 'src/assets/dining2.avif',
+		img: 'dining1.avif',
+		hover: 'dining2.avif',
 		description: 'Dining',
 		link: '/category/dining',
 	},
 	{
-		img: 'src/assets/kids.jpg',
-		hover: 'src/assets/kids2.jpg',
+		img: 'kids.jpg',
+		hover: 'kids2.jpg',
 		description: 'Kids',
 		link: '/category/kids',
 	},
 	{
-		img: 'src/assets/outdoor1.jpg',
-		hover: 'src/assets/outdoor2.jpg',
+		img: 'outdoor1.jpg',
+		hover: 'outdoor2.jpg',
 		description: 'Outdoor',
 		link: '/category/outdoor',
 	},
 	{
-		img: 'src/assets/sofa1.jpg',
-		hover: 'src/assets/sofa2.avif',
+		img: 'sofa1.jpg',
+		hover: 'sofa2.avif',
 		description: 'Living',
 		link: '/category/living-room',
 	},

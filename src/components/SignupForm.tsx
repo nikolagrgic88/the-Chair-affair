@@ -122,7 +122,7 @@ const SignupForm = ({ handleChangeForm }: { handleChangeForm: () => void }) => {
 				label='Last Name'
 				type='text'
 				error={lastNameError}
-				helperText={lastNameHelperText}
+				helperText={lastNameHelperText || authError.message}
 				onChange={(e) => setLastName(e.target.value)}
 				onBlur={() => setIsLastNameTouched(true)}
 			/>

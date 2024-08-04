@@ -1,7 +1,7 @@
 import {
 	Outlet,
 	UNSAFE_useScrollRestoration,
-	useLoaderData,
+	
 } from 'react-router-dom';
 import styles from './styles/App.module.css';
 import Components from './components';
@@ -54,28 +54,15 @@ const App = () => {
 		checkoutSessionDataCart,
 	]);
 
-	const loadedData = useLoaderData() as ApiResponse;
-
-	let category: string[] = [];
-
-	if (loadedData !== null && loadedData !== undefined) {
-		loadedData.forEach((item) => {
-			item.categoryPath.forEach((style) => {
-				if (!category.includes(style.name)) {
-					category.push(style.name);
-				}
-			});
-		});
-	}
 
 	return (
-		<>
+		<div className={styles.mainContainer}>
 			<Components.Header />
 			<div className={styles.outletContainer}>
 				<Outlet />
 			</div>
 			<Components.Footer />
-		</>
+		</div>
 	);
 };
 

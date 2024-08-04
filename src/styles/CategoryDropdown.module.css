@@ -1,22 +1,24 @@
 .categoryContainer {
-	position: relative;
+  position: relative;
 }
 
 .categoryButton {
-	background-color: transparent;
-	border: none;
-	font-size: medium;
-	font-family: inherit;
+  background-color: transparent;
+  border: none;
+  font-size: medium;
+  font-family: inherit;
 }
 
 .dropdownMenu {
-	position: absolute;
-	min-width: 10vh;
-	background-color: var(--color-light-gray);
-	display: flex;
-	flex-direction: column;
-	z-index: 2;
-	gap: 0.5rem;
-	padding: 1rem;
-	font-size: small;
+  position: absolute;
+  min-width: 10vh;
+  background-color: var(--color-light-gray);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-size: small;
+}
+@media screen {
 }

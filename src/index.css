@@ -1,73 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Merriweather:wght@400;700&display=swap");
 :root {
-	/* Primary Colors: */
-	--color-black: #000000;
-	--color-white: #ffffff;
-	--color-light-gray: #dcdcdc;
-	--color-medium-gray: #808080;
-	--color-dark-gray: #404040;
+  /* Primary Colors: */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-light-gray: #dcdcdc;
+  --color-medium-gray: #808080;
+  --color-dark-gray: #404040;
 
-	/* Accent Colors */
-	--color-coral: #ff7f50;
-	--color-seafoam: rgb(127, 255, 212);
-	--color-raspberry: #e30b5d;
+  /* Accent Colors */
+  --color-coral: #ff7f50;
+  --color-seafoam: rgb(127, 255, 212);
+  --color-raspberry: #e30b5d;
 
-	--color-coral-dark: #f05d2d;
-	--color-seafoam-dark: #40e0d0;
-	--color-raspberry-dark: #a8003d;
+  --color-coral-dark: #f05d2d;
+  --color-seafoam-dark: #40e0d0;
+  --color-raspberry-dark: #a8003d;
 
-	--color-peach: #ffdab9;
-	--color-mint: #98fb98;
-	--color-berry: #c72c48;
+  --color-peach: #ffdab9;
+  --color-mint: #98fb98;
+  --color-berry: #c72c48;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body {
-	margin: 0;
-	font-family: 'Merriweather', serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background: var(--background-color);
-	color: var(--main-text-color);
-	min-height: 100vh;
-	overflow-x: hidden;
-	display: flex;
-	flex-direction: column;
+body, html {
+  margin: 0;
+  font-family: "Merriweather", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-color);
+  color: var(--main-text-color);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100vw;
 }
 main {
-	flex-grow: 1;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 100vw;
 }
 
 h1 {
-	text-align: center;
-	text-transform: uppercase;
-	color: var(--color-white);
-	text-shadow: 0 0 4px rgba(35, 34, 34, 0.4);
-	font-size: 2.5rem;
-	margin: 0;
-}
-
-@keyframes fade-slide-in-from-top {
-	0% {
-		opacity: 0;
-		transform: translateY(-50px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-@keyframes fade-slide-in-from-right {
-	0% {
-		opacity: 0;
-		transform: translateX(50px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-shadow: 0 0 4px rgba(35, 34, 34, 0.4);
+  font-size: 2.5rem;
+  margin: 0;
 }

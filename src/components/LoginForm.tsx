@@ -4,7 +4,7 @@ import { Button } from '@mui/material';
 import { authHandleLogin } from '../firestore/auth';
 import { useFormValidation } from '../util/hooks';
 import styles from '../styles/LoginForm.module.css';
-import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
+import { getAuth, onAuthStateChanged, Unsubscribe, User } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
 const LoginForm = ({ handleChangeForm }: { handleChangeForm: () => void }) => {
@@ -31,11 +31,21 @@ const LoginForm = ({ handleChangeForm }: { handleChangeForm: () => void }) => {
 	});
 
 	useEffect(() => {
-		const unsubscribe = onAuthStateChanged(auth, (user) => {
-			setCurrentUser(user);
-		});
+		let unsubscribe: Unsubscribe | null = null; 
+		if (!currentUser) {
+			unsubscribe = onAuthStateChanged(auth, (user) => {
+			  setCurrentUser(user);
+			});
+		  }
+		
+		
+		  return () => {
+			if (unsubscribe) {
+			  unsubscribe();
+			}
+		  };
+		
 
-		return unsubscribe;
 	}, [auth]);
 
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {

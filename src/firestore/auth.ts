@@ -30,7 +30,6 @@ export const authHandleLogin = async ({ email, password }: AuthProps) => {
 			};
 		} else {
 			console.log(error.code);
-
 			return { type: 'all', message: 'An unexpected error occurred.' };
 		}
 	}
@@ -56,7 +55,6 @@ export const authHandleSignup = async ({
 			});
 		}
 
-		console.log('User signed up successfully:', userCredential.user);
 		return null;
 	} catch (error: any) {
 		if (error.code === AuthErrorCodes.EMAIL_EXISTS) {

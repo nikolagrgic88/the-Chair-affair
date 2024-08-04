@@ -57,3 +57,9 @@
 .quantityButtons button:hover {
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.297);
 }
+ @media (max-width:767px) {
+	.imageContainer img {
+		max-width: 10rem;
+		
+	}
+ }

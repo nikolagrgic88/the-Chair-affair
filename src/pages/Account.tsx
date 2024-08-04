@@ -4,7 +4,7 @@ import styles from '../styles/Account.module.css';
 
 const Account = () => {
 	const auth = getAuth().currentUser;
-	console.log('logged in', auth);
+	
 	return (
 		<div className={styles.accountContainer}>
 			<div className={styles.accountHeading}>

@@ -74,9 +74,7 @@ export const useFormValidation = (isLoginForm: boolean) => {
 
 	useEffect(() => {
 		if (isEmailTouched) {
-			console.log('email', email);
-
-			if (email) {
+					if (email) {
 				setEmailHelperText(validateEmail(email) ? '' : 'Invalid email format');
 				setEmailError(!validateEmail(email));
 			} else {

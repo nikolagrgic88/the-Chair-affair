@@ -23,8 +23,11 @@
 
 
 @media (max-width: 767px) {
+	.imageContainer{
+		max-width: 100%;
+	}
 	.imageInnerContainer img {
-		width: 8rem;
+		width: 7.5rem;
 		height: 11rem;
 	}
 	.imageContainer {

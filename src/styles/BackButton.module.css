@@ -1,19 +1,19 @@
 .buttonContainer {
-	min-width: 100%;
-	min-height: 10vh;
-	display: flex;
-	flex-direction: column;
-	align-items: start;
-	justify-content: start;
-	margin-top: 5rem;
+  width: 60rem;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  margin-top: 5rem;
 }
 
 .backButton {
-	max-width: 10%;
-	--background: var(--color-coral);
-	transition: --background 0.2s, transform 0.2s ease-in;
+  max-width: 10%;
+  --background: var(--color-coral);
+  transition: --background 0.2s, transform 0.2s ease-in;
 }
 .backButton:hover {
-	--background: var(--color-coral-dark);
-	transform: scale(1.01);
+  --background: var(--color-coral-dark);
+  transform: scale(1.01);
 }

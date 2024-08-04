@@ -10,8 +10,10 @@ const productsSlice = createSlice({
 	name: 'loadedDataSlice',
 	initialState,
 	reducers: {
-		setProducts(state, action: PayloadAction<DataItem>) {
-			return action.payload;
+		setProducts(state,action: PayloadAction<DataItem>) {
+			state = [...action.payload]
+			return state
+			
 		},
 		appendProducts(state, action: PayloadAction<DataItem>) {
 			const newIds = new Set(action.payload.map((item) => item.id));

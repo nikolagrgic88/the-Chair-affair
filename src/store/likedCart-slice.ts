@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CartState } from './cart-slice';
+
 
 export type LikedCartProduct = {
 	id: string;
