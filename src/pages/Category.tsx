@@ -1,6 +1,5 @@
 import { useParams, useRouteLoaderData } from 'react-router-dom';
 import styles from '../styles/Category.module.css';
-
 import Product, { ProductProps } from '../components/Product';
 import { useEffect, useState } from 'react';
 import { IonButton } from '@ionic/react';

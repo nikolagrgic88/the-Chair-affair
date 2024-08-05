@@ -1,65 +1,95 @@
 .productContainer {
-	min-height: 80vh;
+  min-height: 80vh;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .productDetailsImageContainer {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: flex-start;
-	gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
 }
 .productDetailsContainer {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	margin-top: 3rem;
-	align-items: flex-start;
-	justify-content: space-between;
-	width: 50%;
+  margin-top: 3rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 50%;
 }
 .buttonContainer {
-	display: flex;
+  display: flex;
 }
 #alertMessage {
-	position: absolute;
-	min-width: 10rem;
+  position: absolute;
+  min-width: 10rem;
 }
 .alertButton {
-	display: flex;
-	flex-direction: column;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .imageContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	color: inherit;
-	text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
 
-	min-height: 50vh;
-	width: 450px;
-	position: relative;
+  min-height: 50vh;
+  width: 450px;
+  position: relative;
 }
 .imageContainer img {
-	position: absolute;
-	max-width: 100%;
-	height: auto;
+  position: absolute;
+  max-width: 100%;
+  height: auto;
 }
 
 .details {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .ionButton {
-	--background: var(--color-coral);
-	transition: 0.2s ease-in;
+  --background: var(--color-coral);
+  transition: 0.2s ease-in;
 }
 .ionButton:hover {
-	scale: 1.02;
+  scale: 1.02;
+}
+
+@media (max-width: 767px) {
+  .productContainer {
+    display: block;
+    max-width: 100%;
+    flex-direction: column;
+  }
+  .productDetailsImageContainer {
+    flex-direction: column;
+  }
+  .imageContainer {
+    max-width: 70%;
+    min-height: 32vh;
+  }
+  .productDetailsContainer {
+    align-items: center;
+	gap: 1rem;
+    margin: 0;
+  }
+  .productDetailsContainer h4 {
+   margin: 0.5rem 0;
+  }
+  .details{
+	align-items: center;
+  }
+
+  #topButton {
+    display: none;
+  }
 }

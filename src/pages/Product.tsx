@@ -65,7 +65,9 @@ const Product = () => {
 
   return (
     <div className={styles.productContainer}>
-      <Component.BackButton />
+      <div id={styles.topButton}>
+        <Component.BackButton />
+      </div>
       <div className={styles.productDetailsImageContainer}>
         <motion.div className={styles.imageContainer}>
           <motion.img
